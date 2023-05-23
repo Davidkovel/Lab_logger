@@ -30,10 +30,12 @@ class Calculator:
             self.logger.info(f" {a} // {b} = {result}")
             return result
         except ZeroDivisionError as ex:
+            self.logger.error("Нельзя дiлити на ноль!")
             print("error", ex)
 
 
 c = Calculator()
+logging.basicConfig(level=logging.INFO)
 print(c.mupltiply(15, 3))
 print(c.add(15, 3))
 print(c.minus(15, 3))
