@@ -14,7 +14,7 @@ def real_data(file_path):
             file.write("\n".join(rand))
             logger.info("Успiшно записали в файл")
     except Exception as ex:
-        logging.error(f"Помилка {ex}")
+        logger.error(f"В вашем файлу {file_path} трапилось помилка {ex}")
 
 
 logging.basicConfig(level=logging.INFO)
