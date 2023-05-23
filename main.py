@@ -6,7 +6,7 @@ import logging
 def write_file(fill_path, data):
     try:
         with open(fill_path, "w") as file:
-            logger = logging.getLogger("Calculator")
+            logger = logging.getLogger("File")
             logger.setLevel(logging.INFO)
             logger.addHandler(logging.StreamHandler())
             file.write(data)
